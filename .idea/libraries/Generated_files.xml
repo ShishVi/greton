@@ -1,0 +1,26 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/local/templates/greton/js/jquery-1.11.1.min.min.js" />
+        <item url="file://$PROJECT_DIR$/local/templates/greton/js/jquery-ui.min.min.js" />
+        <item url="file://$PROJECT_DIR$/local/templates/greton/js/jquery.etalage.min.min.js" />
+        <item url="file://$PROJECT_DIR$/local/templates/greton/js/jquery.jscrollpane.min.min.js" />
+        <item url="file://$PROJECT_DIR$/local/templates/greton/js/megamenu.min.js" />
+        <item url="file://$PROJECT_DIR$/local/templates/greton/js/menu_jquery.min.js" />
+        <item url="file://$PROJECT_DIR$/local/templates/greton/js/simpleCart.min.min.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/local/templates/greton/js/jquery-1.11.1.min.min.js" />
+      <root url="file://$PROJECT_DIR$/local/templates/greton/js/jquery-ui.min.min.js" />
+      <root url="file://$PROJECT_DIR$/local/templates/greton/js/jquery.etalage.min.min.js" />
+      <root url="file://$PROJECT_DIR$/local/templates/greton/js/jquery.jscrollpane.min.min.js" />
+      <root url="file://$PROJECT_DIR$/local/templates/greton/js/megamenu.min.js" />
+      <root url="file://$PROJECT_DIR$/local/templates/greton/js/menu_jquery.min.js" />
+      <root url="file://$PROJECT_DIR$/local/templates/greton/js/simpleCart.min.min.js" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
