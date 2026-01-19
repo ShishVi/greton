@@ -2,6 +2,8 @@
   <library name="Generated files" type="javaScript">
     <properties>
       <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/local/templates/greton/components/bitrix/menu/top_head/script.min.js" />
+        <item url="file://$PROJECT_DIR$/local/templates/greton/components/bitrix/menu/top_head/script.min.min.js" />
         <item url="file://$PROJECT_DIR$/local/templates/greton/js/jquery-1.11.1.min.min.js" />
         <item url="file://$PROJECT_DIR$/local/templates/greton/js/jquery-ui.min.min.js" />
         <item url="file://$PROJECT_DIR$/local/templates/greton/js/jquery.etalage.min.min.js" />
@@ -12,6 +14,8 @@
       </sourceFilesUrls>
     </properties>
     <CLASSES>
+      <root url="file://$PROJECT_DIR$/local/templates/greton/components/bitrix/menu/top_head/script.min.js" />
+      <root url="file://$PROJECT_DIR$/local/templates/greton/components/bitrix/menu/top_head/script.min.min.js" />
       <root url="file://$PROJECT_DIR$/local/templates/greton/js/jquery-1.11.1.min.min.js" />
       <root url="file://$PROJECT_DIR$/local/templates/greton/js/jquery-ui.min.min.js" />
       <root url="file://$PROJECT_DIR$/local/templates/greton/js/jquery.etalage.min.min.js" />

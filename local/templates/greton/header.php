@@ -27,7 +27,11 @@ $CurUri = $APPLICATION->GetCurUri();
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH. '/js/jquery-1.11.1.min.js');
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH. '/js/megamenu.js');
     ?>
-    <script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
+    <script type="application/x-javascript">
+        document.addEventListener('DOMContentLoaded', function(){
+           $('.megamenu').megamenu();
+        });
+    </script>
     <?
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH. '/js/menu_jquery.js');
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH. '/js/js/menu_jquery.js');
@@ -61,15 +65,35 @@ $CurUri = $APPLICATION->GetCurUri();
 <div class="top_bg">
     <div class="container">
         <div class="header_top">
-            <div class="top_right">
-                <ul>
-                    <li><a href="#">help</a></li>|
-                    <li><a href="contact.html">Contact</a></li>|
-                    <li><a href="#">Delivery information</a></li>
-                </ul>
-            </div>
+            <?$APPLICATION->IncludeComponent(
+                "bitrix:menu",
+                "top_head",
+                [
+                    "COMPONENT_TEMPLATE" => "horizontal_multilevel",
+                    "ROOT_MENU_TYPE" => "top_head",
+                    "MENU_CACHE_TYPE" => "N",
+                    "MENU_CACHE_TIME" => "3600",
+                    "MENU_CACHE_USE_GROUPS" => "Y",
+                    "MENU_CACHE_GET_VARS" => "",
+                    "MAX_LEVEL" => "1",
+                    "CHILD_MENU_TYPE" => "top_head",
+                    "USE_EXT" => "N",
+                    "DELAY" => "N",
+                    "ALLOW_MULTI_SELECT" => "N"
+                ],
+                false
+            );?>
             <div class="top_left">
-                <h2><span></span> Call us : 032 2352 782</h2>
+                <?$APPLICATION->IncludeComponent(
+                   "bitrix:main.include",
+                   "",
+                   Array(
+                        "AREA_FILE_SHOW" => "file",
+                        "AREA_FILE_SUFFIX" => "inc",
+                        "EDIT_TEMPLATE" => "",
+                        "PATH" => SITE_TEMPLATE_PATH."/inc/phone_header.php"
+                   )
+                );?>
             </div>
             <div class="clearfix"> </div>
         </div>
@@ -80,14 +104,15 @@ $CurUri = $APPLICATION->GetCurUri();
         <div class="header">
             <div class="head-t">
                 <div class="logo">
-                    <a href="index.html"><img src="<?=SITE_TEMPLATE_PATH?>/images/logo.png" class="img-responsive" alt=""/> </a>
+                    <a href="/"><img src="<?=SITE_TEMPLATE_PATH?>/images/logo.png" class="img-responsive" alt="logo"/> </a>
                 </div>
+
                 <!-- start header_right -->
                 <div class="header_right">
                     <div class="rgt-bottom">
                         <div class="log">
                             <div class="login" >
-                                <div id="loginContainer"><a href="#" id="loginButton"><span>Login</span></a>
+                                <div id="loginContainer"><a href="#" id="loginButton"><span>Вход</span></a>
                                     <div id="loginBox">
                                         <form id="loginForm">
                                             <fieldset id="body">
@@ -109,17 +134,17 @@ $CurUri = $APPLICATION->GetCurUri();
                             </div>
                         </div>
                         <div class="reg">
-                            <a href="register.html">REGISTER</a>
+                            <a href="register.html">Регистрация</a>
                         </div>
                         <div class="cart box_1">
                             <a href="checkout.html">
-                                <h3> <span class="simpleCart_total">$0.00</span> (<span id="simpleCart_quantity" class="simpleCart_quantity">0</span> items)<img src="images/bag.png" alt=""></h3>
+                                <h3> <span class="simpleCart_total">$0.00</span> (<span id="simpleCart_quantity" class="simpleCart_quantity">0</span> items)<img src=<?=SITE_TEMPLATE_PATH?>"/images/bag.png" alt=""></h3>
                             </a>
                             <p><a href="javascript:;" class="simpleCart_empty">(empty card)</a></p>
                             <div class="clearfix"> </div>
                         </div>
                         <div class="create_btn">
-                            <a href="checkout.html">CHECKOUT</a>
+                            <a href="checkout.html">Корзина</a>
                         </div>
                         <div class="clearfix"> </div>
                     </div>
